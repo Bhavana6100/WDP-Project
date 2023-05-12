@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resgistration Page</title>
+    <link rel="stylesheet" href="../styles/Style.css">
+    <script>
+        function validateform() {
+              var flag=true;
+              var x1 = document.forms["registrationform"]["firstname"].value;
+              var x2 = document.forms["registrationform"]["lastname"].value;
+              var x3 = document.forms["registrationform"]["username"].value;
+              var x4 = document.forms["registrationform"]["password"].value;
+              var x5 = document.forms["registrationform"]["dob"].value;
+              var x6 = document.forms["registrationform"]["gender"].value;
+              var x7 = document.forms["registrationform"]["contactnumber"].value;
+              
+
+
+               if ((x1 == "" || x1 == null)||(x2 == "" || x2 == null)||(x3 == "" || x3 == null)||(x4 == "" || x4 == null)||(x5 == "" || x5 == null)||(x6 == "" || x6 == null)||(x7 == "" || x7 == null)) {
+                alert("Please update the highlighted mandatory field(s).");
+                flag=false;
+              }
+              else{
+                  alert("Your Registration details are submitted successfully");
+                  flag=true;
+              }
+              return flag;
+
+              }
+        </script>
+
+</head>
+<body background="../images/3.jpeg">
+    <center> 
+        <div class="container">
+            <h3><i>REGISTER HERE</Form></i></h3>
+        </div>
+                
+    <div style="padding-left: 50px;">
+         <form name="registrationform" id="reg-form" action="/RegisterUser" METHOD="post" onsubmit="return validateform()" required>
+            <div class="logi">
+               
+                <table style="margin-left: auto; margin-right: auto;">
+                    <tr><td >  <label for="firstname"><b>First Name : </b></label></td>
+                        <td ><input style="margin-left:30px" type="text" placeholder="Enter First Name" name="firstname" id="firstname" required><br></td></tr>
+    
+                    <tr><td>  <label for="lastname"><b>Last Name : </b></label></td>
+                        <td> <input style="margin-left:30px" type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required><br></td></tr>
+    
+                    <tr><td>   <label for="username"><b>User Name : </b></label></td>
+                        <td> <input style="margin-left:30px" type="text" placeholder="Enter User Name" name="username" id="username"title="Alphanumeric 10  characters"pattern="(?=.*\d)(?=.*[a-zA-Z]).{10,10}" required><br></td></tr>
+    
+                    <tr><td> <label for="password"><b>Password : </b></label></td>
+                        <td><input style="margin-left:30px" type="password" placeholder="Enter Password" name="password" id="password" pattern="(?=.*[@#$%&^()]).{6,}"
+                                   title="Must contain at least one special character and at least 6 characters" required><br></td></tr>
+                                
+                <div>
+
+                    <tr><td>   <label for="dob"><b>Date of Birth : </b></label></td>
+                      <td> <input style="margin-left:30px" type="date" name="dob"  id="dob" required><br><br></td></tr>
+                   </div>
+   
+                   <div>
+                     <tr><td>  <label for="gender"><b>Gender : </b></label></td>
+                          <td> <select style="margin-left:30px" name="gender" id="gender">
+                           <option value="Male">Male</option>
+                           <option value="Female">Female</option>
+                           <option value="Others">Others</option>
+                           </select></td></tr><br><br>
+                   </div>
+   
+                 <tr><td>  <label for="contactnumber"><b>Contact No. : </b></label></td>
+                  <td> <input style="margin-left:30px" type="tel" placeholder="Enter Contact Number" name="contactnumber" id="contactnumber" title="Match format numeric 10 digits"pattern="[0-9]{10,10}" required><br></td></tr>
+    
+                    <tr><td> <br><br> <button style="margin-left:80px" type="submit"  class="Subbtn" >Register</button></td>
+                        <td><br><br><input  style="margin-left:30px" type="reset" value="Cancel" class="Subbtn"></td></tr></table>
+                        <br>
+                        <br>
+                        <br>
+                        
+                      
+                        <tr><td>    <div>
+                            <span class="txt1">
+                                Already have an account?
+                              </span>
+                             <a class="txt2" href="../files/Login.html" style="margin-left:5px" >Sign in </a>.
+                         </div></td></tr>
+                        
+            </div>
+          </form>
+    </div>
+    </center>
+    <script src="Script.js"></script>
+    </body>
+</html>

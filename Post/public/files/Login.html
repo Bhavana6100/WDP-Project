@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../styles/Style.css">
+</head>
+<body background="../images/2.JPG" id="login">
+    
+           <nav class="navbarlogin">
+    
+            <ul>
+                            <li><a  href="../files/HomeNav.html" target="_blank">Home</a></li>
+                          
+                                <li><a   href="../files/Post.html" target="_blank">Post</a></li>
+                           
+            </ul>
+        </nav>
+    <center>
+        <div class="containerlogin">
+            <h3 id="login"><i>LOGIN HERE</i></h3>
+        </div>
+    </center>
+       
+        <center>
+        <div class="logilogin">
+            <form name="loginpage" method="post" id="login-page" action="/UserAuthentication">
+    
+    
+                <tr><td>  <label for="username"><b>User Name : </b></label></td>
+                    <td><input style="margin-left:30px" type="text" placeholder="Enter User Name" name="username" id="username" required><br></td></tr>
+    
+    
+                <tr><td> <br> <label for="password"><b>Password : </b></label></td>
+                    <td><input style="margin-left:40px" type="password" placeholder="Enter Password" name="password" id="password" pattern="(?=.*[@#$%&^()]).{6,}"
+                        title="Must contain at least one special character and at least 6 characters" required><br></td></tr>
+                        <br>
+    
+                <tr><td> <br>  <button style="margin-left:50px" type="submit" name="login" id="login" class="Subbtn">Log in</button></td>
+                    <td> <input style="margin-left:30px" type="reset" id="reset" value="Reset" class="Subbtn"></td></tr>
+                    
+                    <br>
+                        <br>
+                        <br>
+                        <br>
+                        <tr><td>    <div class="text-center p-t-12">
+                        <span class="txt1">
+                        Forgot
+                        </span>
+                        <a style="margin-left:5px" class="txt2" href="#" > Username / Password?   </a> </td></tr>
+                    </div>
+                        <br>
+                        <tr><td>    <div>
+                          <span class="txt1">
+                            New User
+                            </span>
+                           <a class="txt2" href="../files/Register.html" style="margin-left:5px" target="_blank"> Create your Account  </a>
+                       </div></td></tr>
+                       
+                   
+            </form>
+            
+        </div>
+    </center>
+  
+    <script src="Script.js"></script>
+    </body>
+</html>
